@@ -79,5 +79,14 @@ jobs:
       - name: Create Cache Directories
         run: mkdir -p /tmp/rector /tmp/phpstan
 
+      - name: Type Coverage
+        run: vendor/bin/pest --type-coverage --min=100
+
       - name: Tests
-        run: composer test
+        run: vendor/bin/pest --parallel --exactly=100.0 --testsuite=Unit,Feature
+
+      - name: Lint
+        run: composer test:lint
+
+      - name: Static Analysis
+        run: composer test:types

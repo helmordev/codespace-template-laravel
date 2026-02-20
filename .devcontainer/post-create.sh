@@ -29,7 +29,9 @@ bun install
 bun run build
 
 # Install Playwright browsers for browser testing
-bunx playwright install --with-deps chromium
+bun add playwright
+
+bunx playwright install
 
 # Create cache directories for Rector and PHPStan
 mkdir -p /tmp/rector /tmp/phpstan

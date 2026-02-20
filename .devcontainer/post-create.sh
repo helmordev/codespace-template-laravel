@@ -28,9 +28,6 @@ bun install
 # Build frontend assets
 bun run build
 
-# Install Playwright browsers and any missing system dependencies for browser testing
-bunx playwright install --with-deps
-
 # Create cache directories for Rector and PHPStan
 mkdir -p /tmp/rector /tmp/phpstan
 

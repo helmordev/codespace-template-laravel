@@ -5,9 +5,12 @@
         "context": "."
     },
     "features": {
-        "ghcr.io/devcontainers/features/github-cli:1": {}
+        "ghcr.io/devcontainers/features/github-cli:1": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "dockerDashComposeVersion": "v2"
+        }
     },
-    "forwardPorts": [8000, 5173],
+    "forwardPorts": [8000, 5173, 3306, 6379],
     "portsAttributes": {
         "8000": {
             "label": "Laravel",
@@ -15,6 +18,14 @@
         },
         "5173": {
             "label": "Vite",
+            "onAutoForward": "silent"
+        },
+        "3306": {
+            "label": "MySQL",
+            "onAutoForward": "silent"
+        },
+        "6379": {
+            "label": "Valkey",
             "onAutoForward": "silent"
         }
     },

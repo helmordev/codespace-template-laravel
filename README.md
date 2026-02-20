@@ -15,7 +15,6 @@ An ultra-strict, type-safe [Laravel](https://laravel.com) starter kit configured
 | Rector             | 2         | Automated refactoring        |
 | Pint               | 1         | Code formatting              |
 | Prettier           | 3         | JS/CSS formatting            |
-| Playwright         | Latest    | Browser testing              |
 | SQLite             | Default   | Database                     |
 
 ## Getting Started
@@ -98,18 +97,6 @@ php artisan migrate
 php artisan migrate:fresh --seed
 ```
 
-### Browser Testing (Playwright)
-
-Playwright is pre-installed with Chromium in the codespace.
-
-```bash
-# Run browser tests
-php artisan test --compact tests/Browser/
-
-# Re-install Playwright browsers if needed
-bunx playwright install --with-deps chromium
-```
-
 ### Xdebug
 
 Xdebug is installed but **disabled by default** to reduce overhead. Enable it when you need debugging or coverage:
@@ -159,7 +146,6 @@ bun run dev
 ├── routes/
 ├── storage/
 └── tests/
-    ├── Browser/          # Pest browser tests (Playwright)
     ├── Feature/
     └── Unit/
 ```
